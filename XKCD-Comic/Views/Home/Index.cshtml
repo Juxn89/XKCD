@@ -3,8 +3,24 @@
 <head>
     <title>XKCD - Comic</title>
     <link href="@Url.Content("~/lib/bootstrap/dist/css/bootstrap.css")" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
 </head>
-<body>
+<body>    
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand">XKCD Comic</a>
+    </nav>
+    <div class="container">
+        <h3>Titulo del cómic</h3>
+        <div>
+            <figure class="figure">
+                <img src="" class="figure-img img-fluid rounded" alt="">
+                <figcaption class="figure-caption"></figcaption>
+            </figure>
+        </div>
+        <div>
+            <a asp-controller="Comic" asp-route-id="" class="btn btn-outline-primary m-2"> Previos</a>
+        </div>
+    </div>
     <script src="@Url.Content("~/lib/jquery/dist/jquery.js")"></script>
     <script src="@Url.Content("~/lib/bootstrap/dist/js/bootstrap.js")"></script>
 </body>
