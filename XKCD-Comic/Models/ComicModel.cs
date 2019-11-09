@@ -7,5 +7,10 @@ namespace XKCD_Comic.Models
 {
     public class ComicModel
     {
+        public int num { get; set; }
+        public string alt { get; set; }
+        public string img { get; set; }
+        public string title { get; set; }
     }
 }
+ 
