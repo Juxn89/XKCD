@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+// MIS REFERENCIAS
+using XKCD_Comic.BLL;
 
 namespace XKCD_Comic
 {
@@ -24,6 +26,7 @@ namespace XKCD_Comic
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddTransient<IComic, Comic>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
