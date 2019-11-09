@@ -1,4 +1,5 @@
-﻿@{ 
+﻿@model Task<XKCD_Comic.Models.ComicModel>
+@{ 
     Layout = null;
 }
 
@@ -14,11 +15,11 @@
         <a class="navbar-brand" href="#">Comic XKCD App</a>
     </nav>
     <div class="container">
-        <h3>Titulo del cómic</h3>
+        <h3>@Model.Result.title</h3>
         <div>
             <figure class="figure">
-                <img src="" class="figure-img img-fluid rounded" alt="">
-                <figcaption class="figure-caption"></figcaption>
+                <img src="@Model.Result.img" class="figure-img img-fluid rounded" alt="@Model.Result.alt">
+                <figcaption class="figure-caption">@Model.Result.alt</figcaption>
             </figure>
         </div>
         <div>
