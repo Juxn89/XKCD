@@ -20,14 +20,27 @@ namespace XKCD_Comic.BLL
                 {
                     string json = await respuesta.Content.ReadAsStringAsync();
                     comic = JsonConvert.DeserializeObject<ComicModel>(json);
+
+                    comic.prev_num = comic.num - 1;
                 }
             }
             return comic;
         }
 
-        public Task<ComicModel> PreviousComic(int numComic)
+        public async Task<ComicModel> PreviousComic(int numComic)
         {
-            throw new NotImplementedException();
+            ComicModel comic = new ComicModel();
+            using (var httpClient = new HttpClient()) {
+                using (var respuesta = await httpClient.GetAsync($"https://xkcd.com/{numComic}/info.0.json"))
+                {
+                    string json = await respuesta.Content.ReadAsStringAsync();
+                    comic = JsonConvert.DeserializeObject<ComicModel>(json);
+
+                    comic.prev_num = comic.num - 1;
+                }
+            }
+
+            return comic;
         }
     }
 }

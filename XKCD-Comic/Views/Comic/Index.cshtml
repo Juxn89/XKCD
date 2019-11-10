@@ -1,5 +1,5 @@
 ﻿@model Task<XKCD_Comic.Models.ComicModel>
-@{ 
+@{
     Layout = null;
 }
 
@@ -12,7 +12,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Comic XKCD App</a>
+        <a class="navbar-brand" asp-controller="Home">Comic XKCD App</a>
     </nav>
     <div class="container">
         <h3>@Model.Result.title</h3>
