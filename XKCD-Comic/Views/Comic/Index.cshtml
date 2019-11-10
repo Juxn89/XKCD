@@ -23,7 +23,9 @@
             </figure>
         </div>
         <div>
-            <a asp-controller="Comic" asp-route-id="@Model.Result.prev_num" class="btn btn-outline-primary m-2"> Previos </a> &nbsp;
+            @if (Model.Result.num > 1) { 
+                <a asp-controller="Comic" asp-route-id="@Model.Result.prev_num" class="btn btn-outline-primary m-2"> Previos </a>
+            }
             <a asp-controller="Comic" asp-route-id="@Model.Result.next_num" class="btn btn-outline-primary m-2"> Next </a>
         </div>
     </div>
