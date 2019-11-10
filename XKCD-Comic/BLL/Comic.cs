@@ -37,6 +37,7 @@ namespace XKCD_Comic.BLL
                     comic = JsonConvert.DeserializeObject<ComicModel>(json);
 
                     comic.prev_num = comic.num - 1;
+                    comic.next_num = comic.num + 1;
                 }
             }
 

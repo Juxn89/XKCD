@@ -12,6 +12,7 @@ namespace XKCD_Comic.Models
         public string img { get; set; }
         public string title { get; set; }
         public int prev_num { get; set; }
+        public int next_num { get; set; }
     }
 }
  
