@@ -18,7 +18,10 @@ namespace XKCD_Comic.Controllers
         [HttpGet("Comic/{id}")]
         public IActionResult Index(int id)
         {
-            id = id == 404 ? id + 1 : id;
+            if (id == 404) {
+                return RedirectToAction("Index", new { id = 405});
+            }
+
             var data = _comic.PreviousComic(id);
             return View(data);
         }
