@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Net.Http;
 using XKCD_Comic.Models;
+using System.Net;
 
 namespace XKCD_Comic.BLL
 {
@@ -33,6 +34,13 @@ namespace XKCD_Comic.BLL
             using (var httpClient = new HttpClient()) {
                 using (var respuesta = await httpClient.GetAsync($"https://xkcd.com/{numComic}/info.0.json"))
                 {
+                    if (respuesta.StatusCode == HttpStatusCode.NotFound)
+                    {
+                        comic.alt = "Comic not found ! :(";
+                        comic.img = "../assets/img/404.jpg";
+                        return comic;
+                    }
+
                     string json = await respuesta.Content.ReadAsStringAsync();
                     comic = JsonConvert.DeserializeObject<ComicModel>(json);
 
