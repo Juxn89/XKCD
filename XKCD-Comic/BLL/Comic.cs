@@ -36,8 +36,8 @@ namespace XKCD_Comic.BLL
                     string json = await respuesta.Content.ReadAsStringAsync();
                     comic = JsonConvert.DeserializeObject<ComicModel>(json);
 
-                    comic.prev_num = comic.num - 1;
-                    comic.next_num = comic.num + 1;
+                    comic.prev_num = comic.num == 405 ? comic.num - 2 : comic.num - 1;
+                    comic.next_num = comic.num == 403 ? comic.num + 2 : comic.num + 1;
                 }
             }
 
