@@ -38,6 +38,7 @@ namespace XKCD_Comic.BLL
                     {
                         comic.alt = "Comic not found ! :(";
                         comic.img = "../assets/img/404.jpg";
+                        comic.httpStatus = (int)respuesta.StatusCode;
                         return comic;
                     }
 
@@ -46,6 +47,7 @@ namespace XKCD_Comic.BLL
 
                     comic.prev_num = comic.num == 405 ? comic.num - 2 : comic.num - 1;
                     comic.next_num = comic.num == 403 ? comic.num + 2 : comic.num + 1;
+                    comic.httpStatus = (int)respuesta.StatusCode;
                 }
             }
 

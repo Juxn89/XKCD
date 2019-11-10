@@ -13,6 +13,7 @@ namespace XKCD_Comic.Models
         public string title { get; set; }
         public int prev_num { get; set; }
         public int next_num { get; set; }
+        public int httpStatus { get; set; }
     }
 }
  
