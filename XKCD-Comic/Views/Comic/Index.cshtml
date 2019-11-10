@@ -23,10 +23,20 @@
             </figure>
         </div>
         <div>
-            @if (Model.Result.num > 1) { 
+            @if (Model.Result.num > 1 && Model.Result.httpStatus == 200)
+            {
                 <a asp-controller="Comic" asp-route-id="@Model.Result.prev_num" class="btn btn-outline-primary m-2"> Previos </a>
             }
-            <a asp-controller="Comic" asp-route-id="@Model.Result.next_num" class="btn btn-outline-primary m-2"> Next </a>
+
+            @if (Model.Result.httpStatus == 200)
+            {
+                <a asp-controller="Comic" asp-route-id="@Model.Result.next_num" class="btn btn-outline-primary m-2"> Next </a>
+            }
+            else
+            {
+                <a asp-controller="Home" class="btn btn-outline-primary m-2"> Home </a>
+            }
+
         </div>
     </div>
     <script src="@Url.Content("~/lib/jquery/dist/jquery.js")"></script>
