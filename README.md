@@ -1,5 +1,5 @@
 ## Instaladores
-Instalador de ![.NET Core x64](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-windows-x64-installer), ![Carpeta de imágenes](https://drive.google.com/drive/folders/1pOPwaH_Bt9GZD3hIRZaB52pUIE46mS-O)
+Instalador de ![.NET Core x64](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-windows-x64-installer), ![Carpeta de imágenes](https://drive.google.com/drive/folders/1pOPwaH_Bt9GZD3hIRZaB52pUIE46mS-O?usp=sharing)
 
 ## ¿Cómo ejecutar la aplicación?
 1. Abrir la ventana de comandos de windows.
