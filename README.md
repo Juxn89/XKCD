@@ -27,3 +27,4 @@ Instalador de [.NET Core x64](https://dotnet.microsoft.com/download/thank-you/do
 
 8. En un dado caso que nos muestre una pantalla, cómo la de abajo, bastaría con hacer click en en el botón que dice **Mostrar configuración avanzada** y luego hacer click en el enlace que dice **Acceder a localhost(sitio no seguro)**
 ![Paso_10](https://i.ibb.co/3zv3pc9/10.png)
+![Paso_11](https://i.ibb.co/JttZq8q/11.png)
