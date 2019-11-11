@@ -22,7 +22,7 @@
 6. Una vez dentro de la capeta **XKCD-Comic** (en la consola de Windows), ejecutamos el siguiente comando **dotnet run XKCD-Comic.csproj**, esto realizará la compilación del proyecto, re-estructurará las dependencias del mismo y nos permitirá levantar un servidor para ejecutar la aplicación. Esto puede tomar un par de minutos.
 ![Paso_08](https://i.ibb.co/hsxCXcK/8.png)
 
-7. Una vez finalizados el proceso anterior, nos mostrará la información sobre la url en dónde se ejecutará la aplicación; a como se muestra en la imagen de abajo la URL sería: (HTTPS) **https://localhost/5001**, (HTTP)**http://localhost/5000**.
+7. Una vez finalizados el proceso anterior, nos mostrará la información sobre la url en dónde se ejecutará la aplicación; a como se muestra en la imagen de abajo la URL sería: (HTTPS) **https://localhost/5001**, (HTTP)**http://localhost/5000**. Por lo cual tendríamos que abrir el navegador y escribir la URL para poder acceder al aplicativo.
 ![Paso_09](https://i.ibb.co/QK8QDnd/9.png)
 
 8. En un dado caso que nos muestre una pantalla, cómo la de abajo, bastaría con hacer click en en el botón que dice **Mostrar configuración avanzada** y luego hacer click en el enlace que dice **Acceder a localhost(sitio no seguro)**
